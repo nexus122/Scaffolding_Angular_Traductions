@@ -15,6 +15,11 @@ import { HeaderComponent } from './components/header-component/header.component'
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { HomeTestComponentComponent } from './components/home-test-component/home-test-component.component';
 
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     MainComponentComponent,
@@ -30,9 +35,23 @@ import { HomeTestComponentComponent } from './components/home-test-component/hom
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    // Multi idioma
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [],
   bootstrap: [MainComponentComponent],
 })
 export class AppModule {}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
