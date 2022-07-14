@@ -1,7 +1,8 @@
 {
     "demo": {
         "title": "Demo de traducción",
-        "text": "Esto es un ejemplo simple del ngx-translate"
+        "text": "Esto es un ejemplo simple del ngx-translate",
+        "random": "Este es un numero random {{number}}"
     },
     "header":{
         "title": "Demo de traducción"

@@ -8,9 +8,13 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class HomeTestComponentComponent implements OnInit {
 
+  randomNumber: number = Math.floor(Math.random() * 999);
+
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
-    translate.use('en');
+    if(!translate.currentLang){
+      translate.use('en');
+    }
   }
 
   useLanguage(language: string): void {
