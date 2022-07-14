@@ -2,5 +2,12 @@
     "demo": {
         "title": "Demo de traducción",
         "text": "Esto es un ejemplo simple del ngx-translate"
+    },
+    "header":{
+        "title": "Demo de traducción"
+    },
+    "lenguajes":{
+        "english": "Ingles",
+        "spanish": "Español"
     }
 }
