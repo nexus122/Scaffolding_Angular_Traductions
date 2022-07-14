@@ -1,1 +1,1 @@
-# 7_Multi_Lenguaje_First_App
+# Scaffolding_Angular_Traductions
