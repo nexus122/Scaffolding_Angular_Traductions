@@ -1,4 +1,5 @@
 # Scaffolding_Angular_Traductions
+[![CodeFactor](https://www.codefactor.io/repository/github/nexus122/scaffolding_angular_traductions/badge)](https://www.codefactor.io/repository/github/nexus122/scaffolding_angular_traductions)
 
 ## ‍🎨 Angular material + Bluma
 Para facilitar el diseño he obtado por tener dos frameworks.
